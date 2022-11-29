@@ -1,3 +1,8 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 body{
     background-color: #033430;
 }
@@ -6,6 +11,9 @@ body{
     width: 150px;
     padding: 15px;
    
+}
+input{
+    outline: none;
 }
 .sections{
     height: 1000px;
@@ -52,7 +60,7 @@ border-radius: 100px;
     border-bottom-left-radius: 0px;
 }
 .section2{
-height: 900px;
+height: fit-content;
 width: 48%;
 background-color: #FFFFFF;
 color: #001E2B;
@@ -121,46 +129,42 @@ input:focus{
     background-color: #00EC64;
     border: 1px solid black;
 }
+.signin{
+    width: 440px;
+    margin-left: 100px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #fcfcfc;
+    border: 1px solid black;
+}
 .create:hover{
     border-radius: 100px;
 }
-.or{
-    margin-left: 280px;
-}
-.signin{
-   height: 50px; 
-   width: 440px;
-   margin-left: 100px;
-   font-size: 15px;
-   margin-top: 10px;
-   background-color: white;
-}
-.sign:hover{
-    border-radius: 100px;
-}
-.login{
+.section2 .or, .login{
     text-align: center;
 }
+.signin:hover{
+    border-radius: 100px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 footer ul{
-    /* list-style: none; */
     color: #00EC64;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
-    /* width: 80%; */
-    margin-left: 600px;
-}
-footer ul li{
-width:30%;
-margin-top: -55px; 
-
+    flex-wrap: wrap;
+    width: 50%;
 }
 footer p{
     color: white;
-    margin-left: 70px;
-    margin-top: -55px;
-    width: 50%;
 }
 @media screen and (min-width:200px) {
     .logo{
@@ -178,6 +182,50 @@ footer p{
         width: 100%;
     }
 }
+@media screen and (max-width:1220px) {
+    .section2{
+        min-width: 40% !important;
+        padding-left: 5%;
+    }
+    .section2 input[type = text],.section2 input[type = password]{
+        min-width: 90%;
+        margin: auto;
+    }
+    .create{
+        width: 300px;
+    }
+    .signin{
+        width: 300px;
+    }
+    .check{
+        margin-left: 10px;
+        width: 10%;
+    }
+    .section2 .signin, .section2 .create{
+        width: 450px;
+        margin-left: 10px;
+        padding: 5%;
+    }
+}
+@media screen and (max-width:1130px) {
+    .section2{
+        min-width: 40% !important;
+        padding-left: 5%;
+    }
+    .section2 input[type = text],.section2 input[type = password]{
+        width: 50%;
+        margin: auto;
+    }
+    .check{
+        margin-left: -25px;
+        width: 60px;
+    }
+    .section2 .signin, .section2 .create{
+        width: 400px;
+        margin-left: 10px;
+        padding: 5%;
+    }
+}
 @media screen and (max-width:1080px) {
     .create{
     width: 300px;
@@ -192,20 +240,11 @@ footer p{
         width: 400px;    
     }
     .check{
-        margin-left: 60px;
+        margin-left: -10px;
     }
     .signin{
         width: 300px;
         margin-left: 100px;
-    }
-    .or{
-        margin-left: 180px;
-    }
-    footer ul{
-        margin-left: 500px;
-    }
-    footer ul li{
-    width:55%;
     }
 }
 @media screen and (max-width:1020px) {
@@ -223,210 +262,61 @@ footer p{
         margin-left: 80px;
         width: 320px;    
     }
-    .or{
-        margin-left: 250px;
-    }
     .create{
-        width: 300px;
-        margin-left: 70px;
+        width: 250px;
+        margin-left: 20px;
         }
     .signin{
-        width: 300px;
-        margin-left: 70px;
+        width: 250px;
+        margin-left: 20px;
     }
-    footer ul{
-        margin-left: 450px;
-        width:50%;
+    .check{
+        margin-left: -10px;
     }
-    footer ul li{
-        font-size: 20px;
+}
+@media screen and (max-width:990px) {
+    .section2{
+        min-width: 40% !important;
+        padding-left: 5%;
+    }
+    .section2 input[type = text],.section2 input[type = password]{
+        width: 50%;
+        margin: auto;
+    }
+    .check{
+        margin-left: -25px;
+        width: 60px;
+    }
+    .section2 .signin, .section2 .create{
+        width: 350px;
+        margin-left: 10px;
+        padding: 5%;
     }
 }
 @media screen and (max-width:880px) {
-    .logo{
-        margin-left: 200px;
+    .section2{
+        min-width: 40% !important;
+        padding-left: 5%;
+    }
+    .section2 input[type = text],.section2 input[type = password]{
+        width: 50%;
+        margin: auto;
     }
     .myp{
         display: none;
     }
-    .section2{
-        min-width: 80%;
-        margin-left: 80px;
-    }
-    input[type=text]{
-        margin-left: 120px;
-        width: 440px;
-        font-size: 25px;
-}
-input[type=password]{
-    margin-left: 120px;
-    width: 440px;
-    font-size: 25px;
-}
+    
 .check{
-    margin-left: 80px;
-width: 120px;
+    margin-left: -25px;
+width: 40px;
 }
-.create{
-    width: 410px;
-    margin-left: 120px;
-    }
-    .or{
-        margin-left: 320px;
-    }
-    .signin{
-        width: 400px;
-        margin-left: 120px;
-    }
-    footer ul{
-        margin-left: 500px;
-        width:80%;
-        font-size: 20px;
-    }
+.section2 .signin, .section2 .create{
+    width: 320px;
+    margin-left: 10px;
+    padding: 5%;
+}
 }
 @media screen and (max-width:850px) {
-    
-    footer ul{
-        margin-left: 450px;
-        width:85%;
-    }
-    footer ul li{
-        font-size: 25px;
-    }
-    input[type=text]{
-        margin-left: 110px;
-        width: 410px;
-        font-size: 25px;
-}
-input[type=password]{
-    margin-left: 110px;
-    width: 410px;
-    font-size: 25px;
-}
-}
-@media screen and (max-width:800px) {
-    .section1{
-        display: none;
-    }
-    footer ul{
-        margin-left: 250px;
-        width:70%;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    footer ul li{
-        font-size: 25px;
-    }
-    .logo{
-        padding: 10px;
-        margin-left: -30px;
-}
-}
-@media screen and (max-width:720px) {
-    input[type=text]{
-        margin-left: 80px;
-        width: 400px;
-        font-size: 25px;
-}
-input[type=password]{
-    margin-left: 80px;
-    width: 400px;
-    font-size: 25px;
-}
-.check{
-    margin-left: 20px;
-width: 120px;
-}
-.create{
-    width: 350px;
-    margin-left: 80px;
-    }
-    .or{
-        margin-left: 250px;
-    }
-    .signin{
-        width: 350px;
-        margin-left: 80px;
-    }
-    .section1{
-        display:none;
-    }
-}
-@media screen and (max-width:620px) {
-    .section2{
-        width: 90%;
-    }
-    footer ul{
-        margin-left: 250px;
-        display: flex;
-        flex-direction:column-reverse;
-    }
-    footer ul li{
-        font-size: 25px;
-        width:100%;
-    }
-    input[type=text]{
-        margin-left: 60px;
-        width: 400px;
-        font-size: 25px;
-}
-input[type=password]{
-    margin-left: 60px;
-    width: 400px;
-    font-size: 25px;
-}
-.check{
-    margin-left: -10px;
-width: 120px;
-}
-}
-@media screen and (max-width:570px) {
-    
-    footer ul{
-        margin-left: 220px;
-        display: flex;
-        flex-direction:column-reverse;
-    }
-    footer ul li{
-        font-size: 25px;
-        width:100%;
-    }
-    input[type=text]{
-        margin-left: 40px;
-        width: 370px;
-        font-size: 25px;
-}
-input[type=password]{
-    margin-left: 40px;
-    width: 370px;
-    font-size: 25px;
-}
-.check{
-    margin-left: -5px;
-    width: 90px;
-}
-.create{
-    width: 300px;
-    margin-left: 70px;
-    }
-    .or{
-        margin-left: 190px;
-    }
-    .signin{
-        width: 300px;
-        margin-left: 70px;
-    }
-}
-@media screen and (max-width:520px) {   
-    footer ul{
-        margin-left: 220px;
-        display: flex;
-        flex-direction:column-reverse;
-    }
-    footer ul li{
-        font-size: 25px;
-        width:100%;
-    }
     input[type=text]{
         margin-left: 40px;
         width: 330px;
@@ -437,182 +327,213 @@ input[type=password]{
     width: 330px;
     font-size: 25px;
 }
-.check{
-    margin-left: -15px;
-    width: 90px;
 }
-.checkp{
-    margin-left: -30px;
+@media screen and (max-width:800px) {
+    .section1{
+        display: none;
+    }
+    .section2{
+        width: 100%;                
+        padding-left: 5%;
+            }
+    .section2 input[type = text],.section2 input[type = password]{
+     width: 50%;
+    margin: auto;
+            }
+    .section2 .signin, .section2 .create{
+    width: 450px;
+    margin-left: 110px;
+    padding: 5%;
+            }
+    .check{
+        margin-left: -30px;
+        width: 120px;
+        font-size: 28px;
+    }
+    .checkp{
+        margin-left: -50px;
+        font-size: 20px;
+    }
 }
-.create{
-    width: 300px;
-    margin-left: 40px;
-    }
-    .or{
-        margin-left: 190px;
-    }
-    .signin{
-        width: 300px;
-        margin-left: 40px;
-    }
-}
-@media screen and (max-width:480px) {   
-    footer ul{
-        margin-left: 220px;
-        display: flex;
-        flex-direction:column-reverse;
-    }
-    footer ul li{
-        font-size: 25px;
-        width:100%;
-    }
+@media screen and (max-width:720px) {
     input[type=text]{
-        margin-left: 35px;
-        width: 300px;
+        margin-left: 100px;
+        width: 500px;
         font-size: 25px;
 }
 input[type=password]{
-    margin-left: 35px;
-    width: 300px;
+    margin-left: 100px;
+    width: 500px;
     font-size: 25px;
 }
 .check{
-    margin-left: -15px;
-    width: 80px;
-}
-.checkp{
-    margin-left: -30px;
-    font-size: 13px;
+    margin-left: -80px;
+width: 220px;
 }
 .create{
-    width: 300px;
-    margin-left: 40px;
-    }
-    .or{
-        margin-left: 190px;
+    width: 450px;
+    margin-left: 110px;
     }
     .signin{
-        width: 300px;
-        margin-left: 40px;
+        width: 450px;
+        margin-left: 110px;
     }
 }
-@media screen and (max-width:440px) {   
-    footer ul{
-        margin-left: 220px;
-        display: flex;
-        flex-direction:column-reverse;
-    }
-    footer ul li{
-        font-size: 15px;
-        width:100%;
+@media screen and (max-width:620px) {
+    .section2{
+        width: 90%;
     }
     input[type=text]{
-        margin-left: 35px;
-        width: 250px;
+        margin-left: 70px;
+        width: 470px;
         font-size: 25px;
 }
 input[type=password]{
-    margin-left: 35px;
-    width: 250px;
+    margin-left: 70px;
+    width: 470px;
     font-size: 25px;
 }
 .check{
-    margin-left: -15px;
-    width: 63px;
+    margin-left: -90px;
 }
-.checkp{
-    margin-left: -30px;
-    font-size: 13px;
+.section2 .signin, .section2 .create{
+    width: 400px;
+    margin-left: 50px;
+    padding: 5%;
+            }
 }
-.create{
-    width: 250px;
-    margin-left: 40px;
+@media screen and (max-width:570px) {
+    .section2{
+        width: 90%;
+        margin: auto;
     }
-    .or{
-        margin-left: 190px;
-    }
-    .signin{
-        width: 250px;
+    input[type=text]{
+        margin-left: 65px;
+        width: 420px;
+        font-size: 25px;
+}
+input[type=password]{
+    margin-left: 65px;
+    width: 420px;
+    font-size: 25px;
+}
+.check{
+    width: 190px;
+}
+.section2 .signin, .section2 .create{
+    width: 370px;
+    margin-left: 50px;
+    padding: 5%;
+            }
+}
+@media screen and (max-width:520px) { 
+    .section2{
+        width: 90%;
+        margin: auto;
+    }  
+    input[type=text]{
         margin-left: 40px;
+        width: 400px;
+        font-size: 25px;
+}
+input[type=password]{
+    margin-left: 40px;
+    width: 400px;
+    font-size: 25px;
+}
+.check{
+    margin-left: -55px;
+    width: 140px;
+}
+.section2 .signin, .section2 .create{
+    width: 340px;
+    margin-left: 30px;
+    padding: 5%;
+            }
+}
+@media screen and (max-width:450px) { 
+    .section2{
+        min-width: 90% !important;
+        margin: auto !important;
+        padding-left: 5%;
     }
+    .section2 input[type = text],.section2 input[type = password]{
+        width: 90%;
+        margin: auto;
+    }
+    .section2 .create, .section2 .signin{
+    width: 70%;
+    margin-left: 30px;
+    }
+.check{
+    width: 120px;
+    margin-left: -60px;
+}
 }
 @media screen and (max-width:420px) { 
-    
-    footer ul{
-        margin-left: 220px;
-        display: flex;
-        flex-direction:column-reverse;
+    .section2{
+        min-width: 90% !important;
+        margin: auto !important;
+        padding-left: 5%;
     }
-    footer ul li{
-        font-size: 15px;
-        width:100%;
+    .section2 input[type = text],.section2 input[type = password]{
+        min-width: 90%;
+        margin: auto;
     }
-    input[type=text]{
-        margin-left: 25px;
-        width: 220px;
-        font-size: 25px;
-}
-input[type=password]{
-    margin-left: 35px;
-    width: 220px;
-    font-size: 25px;
-}
-.check{
-    margin-left: -15px;
-    width: 65px;
-}
-.checkp{
-    margin-left: -30px;
-    font-size: 13px;
-}
-.create{
-    width: 250px;
-    margin-left: 40px;
-    }
-    .or{
-        margin-left: 190px;
-    }
-    .signin{
-        width: 250px;
+    .section2 .create, .section2 .signin{
         margin-left: 40px;
+        width: 280px;
     }
+    .check{
+        margin-left: -45px;
+        width: 100px;
+    }
+
 }
 @media screen and (max-width:390px) { 
-    .create{
-        width: 220px;
+    
+    .section2 .create, .section2 .signin{
         margin-left: 40px;
-        }
-        .or{
-            margin-left: 120px;
-        }
-        .signin{
-            width: 220px;
-            margin-left: 40px;
-        }
-        .section2{
-            height: 920px;
-        }
-        footer ul{
-            margin-left: 220px;
-            margin-top: 40px;
-            display: flex;
-            flex-direction:column-reverse;
-        }
-        footer ul li{
-            font-size: 15px;
-            width:100%;
-        }
+        width: 270px;
+    }
+    .check{
+        margin-left: -45px;
+        width: 100px;
+    }
     }
     @media screen and (max-width:350px) { 
-    .create{
-        width: 200px;
-        margin-left: 30px;
-        }
-        .or{
-            margin-left: 120px;
-        }
-        .signin{
+        .section2 .create, .section2 .signin{
+            margin-left: 40px;
             width: 200px;
-            margin-left: 30px;
+        }
+        .check{
+            margin-left: -35px;
+            width: 100px;
+        }
+    }
+    @media screen and (max-width:280px) { 
+        .section2 .create, .section2 .signin{
+            margin-left: 10px;
+            width: 200px;
+        }
+        .check{
+            margin-left: -35px;
+            width: 100px;
+        }
+        .login{
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width:240px) { 
+        .section2 .create, .section2 .signin{
+            margin-left: 10px;
+            width: 170px;
+        }
+        .check{
+            margin-left: -35px;
+            width: 100px;
+        }
+        .login{
+            text-align: justify;
         }
     }
